@@ -1,0 +1,85 @@
+/* TÍTULOS */
+h2 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* IMAGEN */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXTO */
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* PRECIO */
+.text-primary {
+    color: #212529 !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* BOTÓN */
+.btn-primary {
+    background-color: #212529;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+/* HOVER BOTÓN */
+.btn-primary:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+/* TABLA */
+table {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* HEADER TABLA */
+thead {
+    background-color: #212529;
+    color: white;
+}
+
+/* FILAS */
+tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: 0.2s;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .card img {
+        height: 180px;
+    }
+}

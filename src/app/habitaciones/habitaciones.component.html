@@ -1,1 +1,55 @@
-<p>habitaciones works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">HABITACIONES</h2>
+      <p class="text-center">
+        En Hoteles Flork contamos con habitaciones diseñadas para brindar el máximo confort.
+        Desde opciones económicas hasta suites de lujo con servicios exclusivos.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 col-md-4" *ngFor="let habitacion of habitaciones">
+      <div class="card mb-4 shadow">
+        <img [src]="habitacion.imagen" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{ habitacion.nombre }}</h5>
+          <p class="card-text text-center">{{ habitacion.descripcion }}</p>
+          <h6 class="text-center text-primary">$ {{ habitacion.precio }} / noche</h6>
+
+          <div class="text-center">
+            <button class="btn btn-primary mt-2" (click)="reservar(habitacion.nombre)">
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLA DE CARACTERÍSTICAS -->
+<div class="container mt-5">
+  <div class="row">
+    <h3 class="text-center">Características de las habitaciones</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Habitación</th>
+          <th>Capacidad</th>
+          <th>Servicios incluidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of caracteristicas">
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.capacidad }}</td>
+          <td>{{ item.servicios }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
